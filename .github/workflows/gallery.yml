@@ -10,6 +10,6 @@ jobs:
   connect-remote:
     runs-on: ubuntu-latest
     steps:
-    - uses: action/checkout@v3
+    - uses: actions/checkout@main
     - name: Show Databases
-      run: mysql -h hostname --port 3306 -username -password -e "Show Databases"
+      run: mysql -h ${{ secrets.DB_HOSTNAME }} --port 3306 -u${{ secrets.DB_USER }} -p${{ secrets.DB_PASSWORD }} -e "Show Databases"
