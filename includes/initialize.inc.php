@@ -18,4 +18,4 @@ session_start();
 if (file_exists('includes/config.inc.php')) include_once('includes/config.inc.php');
 
 
-//<------end contents of initialize_config.inc.php
+//<------end contents of initialize.inc.php

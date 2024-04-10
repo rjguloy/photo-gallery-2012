@@ -1,0 +1,9 @@
+name: gallery
+run-name: Setting up the photo gallery database
+on: [push]
+jobs:
+  test-output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test output
+        run: echo "Here is a test"
