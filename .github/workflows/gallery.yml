@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Show Databases
         run: mysql -h ${{ secrets.DB_HOSTNAME }} -P 3306 -u${{ secrets.DB_USER }} -p${{ secrets.DB_PASS }} -e "SHOW DATABASES";
+      - name: Run a sample SQL on remote
+        run: mysql -h ${{ secrets.DB_HOSTNAME }} -P 3306 -u${{ secrets.DB_USER }} -p${{ secrets.DB_PASS }} -e "source sql_init/photo_gallery_script.sql";
